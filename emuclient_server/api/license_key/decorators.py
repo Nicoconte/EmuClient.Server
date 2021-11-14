@@ -7,8 +7,8 @@ from api.enums.response_msg import ResponseMessage
 
 def license_key_validator(f):
     def requestchecker(request, *args):
-        print(request.META.get('HTTP_AUTHORIZATION'))
-        if not LicenseKeyService.validate(request.META.get('HTTP_AUTHORIZATION')):
+        key = request.META.get('HTTP_AUTHORIZATION')
+        if key == None or not LicenseKeyService.validate(key):
             raise Response({
                 "status": False,
                 "reason": ResponseMessage.UNAUTHORIZED
