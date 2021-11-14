@@ -4,7 +4,7 @@ from .views import *
 
 urlpatterns = [
     path('create/', create_game_catalogue),
-    path('list/', filter_games_by_catalogue),
+    path('filter/', filter_games_by_catalogue),
     path('all/', list_games),
     path('all/catalogue/', list_games_catalogue)
 ]

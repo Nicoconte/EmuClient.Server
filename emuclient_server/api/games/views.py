@@ -66,7 +66,7 @@ def list_games(request):
 @license_key_validator
 def filter_games_by_catalogue(request):
     try:
-        catalogue = Catalogue.objects.get(platform=request.GET.get('filter'))
+        catalogue = Catalogue.objects.get(platform=request.GET.get('catalogue'))
     
         games = Game.objects.filter(catalogue=catalogue)
 
