@@ -38,7 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
-    'api.license_key'
+    'api.license_key',
+    'api.games'
 ]
 
 MIDDLEWARE = [
